@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "network-requests",
+  "version": "1.0",
+  "description": "Logging network requests",
+
+  "permissions": [
+    "webRequest"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
