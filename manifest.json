@@ -5,10 +5,10 @@
   "description": "Logging network requests",
 
   "permissions": [
-    "webRequest"
+    "webRequest", "storage"
   ],
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js", "require.js"]
   }
 }
