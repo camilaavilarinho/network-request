@@ -6,12 +6,14 @@ gettingConnection.then(results => {
     };
   }
 
+  const{connection} = results
+  var output = [];
   function logURL(requestDetails) {
-    var log = filter(requestDetails);
+    var data = filter(requestDetails);
 
-    results.connection = log;
+    results.connection = data;
     browser.storage.local.set(results);
-    console.log("Results: "+ results.connection);
+    //console.log("Results: "+ results.connection);
   }
 
   function filter(requestDetails){
@@ -49,7 +51,7 @@ gettingConnection.then(results => {
       }
     }
 
-    var output = [source, target, timestamp, contentType, cookie, secure, sourcePathDepth, sourceQueryDepth, method, header];
+    output.push([source, target, timestamp, contentType, cookie, secure, sourcePathDepth, sourceQueryDepth, method]);
     return output;
 
   }

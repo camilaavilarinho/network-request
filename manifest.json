@@ -3,12 +3,23 @@
   "name": "network-requests",
   "version": "1.0",
   "description": "Logging network requests",
+  "browser_action": {
+    "default_icon": {
+      "32": "icons/icon-32.png"
+    },
+    "default_title": "Network requests",
+    "default_popup": "popup.html"
+  },
 
   "permissions": [
     "webRequest", "storage"
   ],
 
+  "icons": {
+    "32": "icons/icon-32.png"
+  },
+
   "background": {
-    "scripts": ["background.js", "require.js"]
+    "scripts": ["background.js"]
   }
 }
